@@ -9,4 +9,12 @@ public class ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+    public void SettingsScene()
+    {
+        SceneManager.LoadScene("SettingsMenu");
+    }
+    public void MainMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

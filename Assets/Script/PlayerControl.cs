@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     float HP, SPD, ATK, HASTE;
 
     public bool MoveLeft;
-    // Start is called before the first frame update
+    public Animator animation;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,7 +20,6 @@ public class PlayerControl : MonoBehaviour
         HASTE = 10f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Walk();
@@ -29,6 +30,15 @@ public class PlayerControl : MonoBehaviour
         float MoveX = Input.GetAxis("Horizontal");
         float MoveY = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(MoveX * SPD, MoveY * SPD);
+
+        if (MoveX != 0 || MoveY != 0)
+        {
+            animation.SetBool("Moving", true);
+        }
+        else
+        {
+            animation.SetBool("Moving", false);
+        }
 
         if (MoveX > 0)
         {
