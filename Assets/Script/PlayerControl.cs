@@ -42,12 +42,12 @@ public class PlayerControl : MonoBehaviour
 
         if (moveX > 0)
         {
-            transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            transform.localScale = new Vector3(0.06f, 0.06f, 0.06f);
             moveLeft = false;
         }
         else if (moveX < 0)
         {
-            transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
+            transform.localScale = new Vector3(-0.06f, 0.06f, 0.06f);
             moveLeft = true;
         }
     }
