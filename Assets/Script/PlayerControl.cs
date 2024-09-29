@@ -7,17 +7,23 @@ using UnityEngine.SceneManagement;
 public class PlayerControl : MonoBehaviour
 {
     Rigidbody2D rb;
-    float hp, spd, atk, haste;
 
+    int hp, atk;
+    float spd, haste;
     public bool moveLeft;
     public Animator animation;
+    public GameObject skill1;
+    public GameObject attack;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        hp = 30f;
+        hp = 30;
         spd = 5f;
-        atk = 5f;
+        atk = 5;
         haste = 10f;
+
+        InvokeRepeating("UseSkill1", 10f, 10f);
+        InvokeRepeating("UseAttack", 3f, 3f);
     }
 
     void Update()
@@ -50,5 +56,16 @@ public class PlayerControl : MonoBehaviour
             transform.localScale = new Vector3(-0.06f, 0.06f, 0.06f);
             moveLeft = true;
         }
+    }
+
+    void UseSkill1()
+    {
+        GameObject Skill1 = (GameObject)Instantiate(skill1);
+        Skill1.transform.position = transform.position;
+    }
+    void UseAttack()
+    {
+        GameObject Attack = (GameObject)Instantiate(attack);
+        Attack.transform.position = transform.position;
     }
 }
