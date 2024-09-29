@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,742 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sprite-Koki-1_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1662
+        width: 452
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904d1d2fba9e7b44790663d16d7ab866
+      internalID: -606939829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_1
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1662
+        width: 448
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06df36c9f283b394896c732ea6cf4413
+      internalID: -2126526411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_2
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1662
+        width: 442
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6163a2730bf9394d8e50cbae4a5893b
+      internalID: 98783394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_3
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1662
+        width: 452
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11fa78d1a158b745be9d1449e081f4a
+      internalID: 1263900638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_4
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 1662
+        width: 452
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2d21ebea4764a4f8282f205d6492fd
+      internalID: -1549435235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_5
+      rect:
+        serializedVersion: 2
+        x: 2894
+        y: 2041
+        width: 116
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c5ec7cda9192b4fbd827738f5fb223
+      internalID: 899055261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_6
+      rect:
+        serializedVersion: 2
+        x: 2609
+        y: 1803
+        width: 111
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8d8f4812a14cd44b8af04b4e577946
+      internalID: -1004492307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_7
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 1825
+        width: 68
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919751d5a002ff743a8dcf4ac0243b78
+      internalID: 579404332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_8
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 1758
+        width: 268
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781b04e1446075f4d9741dc293f6806d
+      internalID: 1456013327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_9
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 1853
+        width: 110
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e448e6bb7753154d865767f11627262
+      internalID: -964587940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_10
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 1855
+        width: 58
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5937848aeb1a9bf49bde6208cb58a917
+      internalID: 1492930734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_11
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 1823
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbd4ac52a09ca44a88c3eb21d477d37
+      internalID: 1199592520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_12
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 1810
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfbf2383401ce24d98713048d2f6c76
+      internalID: 260781693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_13
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 1653
+        width: 90
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da786fe262c96049b8c1d070edbfd32
+      internalID: -625349577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_14
+      rect:
+        serializedVersion: 2
+        x: 2917
+        y: 1643
+        width: 125
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62a0931d718f7348a1ea479ca20b06f
+      internalID: 113897786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_15
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 1638
+        width: 86
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b1969ebc213224fbbe51d3496f87d9
+      internalID: 1276400038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_16
+      rect:
+        serializedVersion: 2
+        x: 3181
+        y: 1578
+        width: 216
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca1e10444ad6414b90acec0f2e3cbca
+      internalID: -721282958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_17
+      rect:
+        serializedVersion: 2
+        x: 2797
+        y: 1598
+        width: 58
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c73d48fb4597e44a01f7c54ca00d8c
+      internalID: -2082904756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_18
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 1583
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709ece17ff77b064396ff94086d6749d
+      internalID: -2067771789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_19
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1580
+        width: 66
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8a3a3ffbb8e6d4599cca99b3efacfc
+      internalID: 1904572638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_20
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 1580
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7f4b11be8636642a07b269bfec7d7e
+      internalID: 1850710473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1062
+        width: 435
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9703987cfde471c4bba2ccc6e169cf8d
+      internalID: -1923862933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_22
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1064
+        width: 411
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111936d60e229cd4a8abd17363c6fe34
+      internalID: 195449793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_23
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1064
+        width: 422
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c356fa4c079f547995b5bab0ca614d
+      internalID: 1523253499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_24
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1062
+        width: 434
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14b388032871974ab9146e8fa0d3dc5
+      internalID: -1482343641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_25
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1064
+        width: 437
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de743a9013e3784591ee491e3b5524c
+      internalID: -2071036921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_26
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 1062
+        width: 435
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0f3057b1a2365439e638749808667c
+      internalID: 269285652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_27
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 1520
+        width: 77
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0034de34236daac4d957293e9b6d32d0
+      internalID: -1860304878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_28
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1518
+        width: 75
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca37c915c12cf6842a55b2f91ccd264a
+      internalID: 1775990619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_29
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 560
+        width: 513
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f0c215e8d06a34990118edc26c481c
+      internalID: -1152628002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_30
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 563
+        width: 540
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6579d6b6397eb3e45a84880c5352757a
+      internalID: -1137020695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_31
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 668
+        width: 113
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2afeaa20dcaf649ba5756e41ea464c
+      internalID: -1508133168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_32
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 558
+        width: 462
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f403c4d962a9d45b0acceeede4c0b0
+      internalID: 2017936052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_33
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 618
+        width: 113
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6bf7ad049d20d45b9a02ce811a0469
+      internalID: 1194487165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-Koki-1_34
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 558
+        width: 461
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e251a41fbf7779e43b04e116b45b0a40
+      internalID: 1417532409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +867,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sprite-Koki-1_0: -606939829
+      Sprite-Koki-1_1: -2126526411
+      Sprite-Koki-1_10: 1492930734
+      Sprite-Koki-1_11: 1199592520
+      Sprite-Koki-1_12: 260781693
+      Sprite-Koki-1_13: -625349577
+      Sprite-Koki-1_14: 113897786
+      Sprite-Koki-1_15: 1276400038
+      Sprite-Koki-1_16: -721282958
+      Sprite-Koki-1_17: -2082904756
+      Sprite-Koki-1_18: -2067771789
+      Sprite-Koki-1_19: 1904572638
+      Sprite-Koki-1_2: 98783394
+      Sprite-Koki-1_20: 1850710473
+      Sprite-Koki-1_21: -1923862933
+      Sprite-Koki-1_22: 195449793
+      Sprite-Koki-1_23: 1523253499
+      Sprite-Koki-1_24: -1482343641
+      Sprite-Koki-1_25: -2071036921
+      Sprite-Koki-1_26: 269285652
+      Sprite-Koki-1_27: -1860304878
+      Sprite-Koki-1_28: 1775990619
+      Sprite-Koki-1_29: -1152628002
+      Sprite-Koki-1_3: 1263900638
+      Sprite-Koki-1_30: -1137020695
+      Sprite-Koki-1_31: -1508133168
+      Sprite-Koki-1_32: 2017936052
+      Sprite-Koki-1_33: 1194487165
+      Sprite-Koki-1_34: 1417532409
+      Sprite-Koki-1_4: -1549435235
+      Sprite-Koki-1_5: 899055261
+      Sprite-Koki-1_6: -1004492307
+      Sprite-Koki-1_7: 579404332
+      Sprite-Koki-1_8: 1456013327
+      Sprite-Koki-1_9: -964587940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

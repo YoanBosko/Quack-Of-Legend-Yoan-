@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerControl : MonoBehaviour
+public class EnemyChefM : MonoBehaviour
 {
     Rigidbody2D rb;
-    float hp, spd, atk, haste;
+    float hp, spd, atk;
 
     public bool moveLeft;
     public Animator animation;
@@ -15,9 +15,8 @@ public class PlayerControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         hp = 30f;
-        spd = 5f;
+        spd = 1f;
         atk = 5f;
-        haste = 10f;
     }
 
     void Update()
@@ -27,8 +26,9 @@ public class PlayerControl : MonoBehaviour
 
     void Walk()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
+        // int Rando = Random.Range(1,2);
+        float moveX;
+        float moveY;
         rb.velocity = new Vector2(moveX * spd, moveY * spd);
 
         if (moveX != 0 || moveY != 0)
@@ -51,4 +51,5 @@ public class PlayerControl : MonoBehaviour
             moveLeft = true;
         }
     }
+    
 }
