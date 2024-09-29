@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using UnityEditor;
 
 public class EnemyChefM : MonoBehaviour
 {
@@ -14,7 +12,6 @@ public class EnemyChefM : MonoBehaviour
     float hp, spd, atk;
     public bool moveLeft;
     public Animator animation;
-    float distance;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
