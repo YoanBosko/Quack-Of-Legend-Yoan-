@@ -12,17 +12,21 @@ public class PlayerControl : MonoBehaviour
     float spd, haste;
     public bool moveLeft;
     public Animator animation;
-    public GameObject skill1;
-    public GameObject attack;
+    private AttackScript attackScript;
+    private PassiveScript passiveScript;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        attackScript = FindAnyObjectByType<AttackScript>();
+        passiveScript = FindAnyObjectByType<PassiveScript>();
         hp = 30;
         spd = 5f;
         atk = 5;
         haste = 10f;
 
-        InvokeRepeating("UseSkill1", 10f, 10f);
+        
+
+        InvokeRepeating("UsePassive", 10f, 10f);
         InvokeRepeating("UseAttack", 3f, 3f);
     }
 
@@ -58,14 +62,27 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void UseSkill1()
+    void UsePassive()
     {
-        GameObject Skill1 = (GameObject)Instantiate(skill1);
-        Skill1.transform.position = transform.position;
+        passiveScript.animation.SetBool("PassiveOn", true);
+        StartCoroutine(DelayPassive());
+    }
+
+    IEnumerator DelayPassive()
+    {
+        yield return new WaitForSeconds(0.5f);
+        passiveScript.animation.SetBool("PassiveOn", false);
+
     }
     void UseAttack()
     {
-        GameObject Attack = (GameObject)Instantiate(attack);
-        Attack.transform.position = transform.position;
+        attackScript.animation.SetBool("Attacking", true);
+        StartCoroutine(DelayAttack());
+    }
+
+    IEnumerator DelayAttack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        attackScript.animation.SetBool("Attacking", false);
     }
 }
