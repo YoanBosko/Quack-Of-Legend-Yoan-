@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EnemyChefM : MonoBehaviour
 {
     Rigidbody2D rb;
+    Collider2D Col2d;
     GameObject playerObject;
 
     int hp, atk;
@@ -16,6 +17,7 @@ public class EnemyChefM : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Col2d = GetComponent<Collider2D>();
         hp = 30;
         spd = 1f;
         atk = 5;
@@ -45,6 +47,22 @@ public class EnemyChefM : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, playerObject.transform.position, spd * Time.deltaTime);
             animation.SetBool("Moving", true);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.CompareTag("Player"))
+        {
+            Col2d.isTrigger = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            Col2d.isTrigger = false;
         }
     }
 }

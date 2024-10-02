@@ -17,4 +17,9 @@ public class ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game Quit");
+    }
 }

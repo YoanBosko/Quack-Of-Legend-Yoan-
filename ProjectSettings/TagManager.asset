@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Skill1
   - Attack
+  - Passive
   layers:
   - Default
   - TransparentFX
