@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,7 +313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52118811d3227a741bf87abb9dea1abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 021ee311a836b7f42a91eb9cfbf4feb8, type: 3}
   audioSource: {fileID: 1569888782}
+  parentGameObject: {fileID: 1594575164}
 --- !u!82 &1569888782
 AudioSource:
   m_ObjectHideFlags: 0
