@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+    public AudioClip clip;
     public AudioSource audioSource;
+    public GameObject parentGameObject;
 
     void Start()
     {
@@ -15,8 +17,8 @@ public class StartMenu : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            DontDestroyOnLoad(gameObject.GetComponent<AudioSource>());
-            audioSource.Play();
+            DontDestroyOnLoad(parentGameObject);
+            audioSource.PlayOneShot(clip);
             SceneManager.LoadScene("MainMenu");
         }
     }
