@@ -11,21 +11,16 @@ public class ButtonScript : MonoBehaviour
     {
         destroyLoad = FindAnyObjectByType<DestroyLoad>();
     }
-    public void GameScene()
+    public void LoadScene(string aValue)
     {
-        SceneManager.LoadScene("GameScene");
+        //Melakukan perpindahan antar scene. Catatan: Scene yang dipanggil sudah didaftarkan di Build Setting
+        SceneManager.LoadScene(aValue);
     }
-    public void SettingsScene()
-    {
-        SceneManager.LoadScene("SettingsMenu");
-    }
-    public void MainMenuScene()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+
     public void ExitGame()
     {
         Application.Quit();
         Debug.Log("Game Quit");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
