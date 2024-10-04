@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
+    private DestroyLoad destroyLoad;
+
+    void Start()
+    {
+        destroyLoad = FindAnyObjectByType<DestroyLoad>();
+    }
     public void GameScene()
     {
         SceneManager.LoadScene("GameScene");

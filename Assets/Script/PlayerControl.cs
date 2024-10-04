@@ -24,8 +24,6 @@ public class PlayerControl : MonoBehaviour
         atk = 5;
         haste = 10f;
 
-        
-
         InvokeRepeating("UsePassive", 10f, 10f);
         InvokeRepeating("UseAttack", 3f, 3f);
     }
@@ -67,19 +65,17 @@ public class PlayerControl : MonoBehaviour
         passiveScript.animation.SetBool("PassiveOn", true);
         StartCoroutine(DelayPassive());
     }
-
     IEnumerator DelayPassive()
     {
         yield return new WaitForSeconds(0.5f);
         passiveScript.animation.SetBool("PassiveOn", false);
-
     }
+
     void UseAttack()
     {
         attackScript.animation.SetBool("Attacking", true);
         StartCoroutine(DelayAttack());
     }
-
     IEnumerator DelayAttack()
     {
         yield return new WaitForSeconds(0.5f);

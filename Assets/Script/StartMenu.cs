@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public AudioClip clip;
+    // private DestroyLoad destroyLoad;
     public AudioSource audioSource;
-    public GameObject parentGameObject;
 
     void Start()
     {
@@ -17,9 +16,13 @@ public class StartMenu : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            DontDestroyOnLoad(parentGameObject);
-            audioSource.PlayOneShot(clip);
+            audioSource.Play();
             SceneManager.LoadScene("MainMenu");
         }
+    }
+    void Awake()
+    {
+        // destroyLoad = FindAnyObjectByType<DestroyLoad>();
+        // destroyLoad.mainMenuAudio = true;
     }
 }
