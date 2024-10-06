@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PauseScript : MonoBehaviour
+public class GameState : MonoBehaviour
 {
     GameObject playerObject;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
+    public UnityEvent settingEvent;
     public bool paused;
     public bool settings;
     void Start()
@@ -24,6 +25,11 @@ public class PauseScript : MonoBehaviour
             paused = true;
             pauseEvent?.Invoke();
             Time.timeScale = 0f;
+        }
+        else if (settings == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            settings = false;
+            settingEvent?.Invoke();
         }
         else if (paused == true && Input.GetKeyDown(KeyCode.Escape))
         {

@@ -19,7 +19,7 @@ public class EnemyChefM : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Col2d = GetComponent<Collider2D>();
         hp = 30;
-        spd = 1f;
+        spd = 1.5f;
         atk = 5;
     }
 
