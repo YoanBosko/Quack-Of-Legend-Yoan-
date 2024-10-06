@@ -15,9 +15,4 @@ public class StartMenu : MonoBehaviour
             MainEvent?.Invoke();
         }
     }
-    void Awake()
-    {
-        // destroyLoad = FindAnyObjectByType<DestroyLoad>();
-        // destroyLoad.mainMenuAudio = true;
-    }
 }
