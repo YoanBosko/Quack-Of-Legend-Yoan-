@@ -1,32 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class EnemyChefM : MonoBehaviour
 {
     Rigidbody2D rb;
-    Collider2D Col2d;
     GameObject playerObject;
+    public UnityEvent hitEvent;
 
-    int hp, atk;
-    float spd;
+    int hp;
+
     public bool moveLeft;
+    public bool dead;
     public Animator animation;
+    private PlayerStatus playerStatus;
+    private EnemyStatus enemyStatus;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Col2d = GetComponent<Collider2D>();
-        hp = 30;
-        spd = 1.5f;
-        atk = 5;
+        playerStatus = FindAnyObjectByType<PlayerStatus>();
+        enemyStatus = FindAnyObjectByType<EnemyStatus>();
+        hp = enemyStatus.hp;
     }
 
     void Update()
     {
         Walk();
-        // int Rando = Random.Range(1,2);
+        if (hp <= 0 && dead == false)
+        {
+            dead = true;
+            animation.SetTrigger("Dead");
+            StartCoroutine(DelayDead());
+        }
     }
 
     void Walk()
@@ -44,25 +50,52 @@ public class EnemyChefM : MonoBehaviour
                 transform.localScale = new Vector3(-1f, 1f, 1f);
                 moveLeft = true;
             }
-
-            transform.position = Vector3.MoveTowards(transform.position, playerObject.transform.position, spd * Time.deltaTime);
-            animation.SetBool("Moving", true);
+            if (dead != true)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, playerObject.transform.position, enemyStatus.spd * Time.deltaTime);
+                animation.SetBool("Moving", true);
+            }
+            else
+            {
+                animation.SetBool("Moving", false);
+            }
         }
+
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    IEnumerator DelayDead()
     {
-        if (col.collider.CompareTag("Player"))
+        yield return new WaitForSeconds(0.25f);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D col2d)
+    {
+        if (col2d.tag == "Attack")
         {
-            Col2d.isTrigger = true;
+            hp -= playerStatus.atk;
+            hitEvent?.Invoke();
+        }
+        if (col2d.tag == "Passive")
+        {
+            hp -= playerStatus.atk / 2;
+            hitEvent?.Invoke();
         }
     }
 
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            Col2d.isTrigger = false;
-        }
-    }
+    // void OnCollisionEnter2D(Collision2D col)
+    // {
+    //     if (col.collider.CompareTag("Player"))
+    //     {
+    //         Col2d.isTrigger = true;
+    //     }
+    // }
+
+    // void OnTriggerExit2D(Collider2D col)
+    // {
+    //     if (col.tag == "Player")
+    //     {
+    //         Col2d.isTrigger = false;
+    //     }
+    // }
 }

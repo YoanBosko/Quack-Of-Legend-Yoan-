@@ -15,7 +15,7 @@ public class AttackScript : MonoBehaviour
     }
     void Update()
     {
-        attackPosition = GameObject.Find("Player Pos");
+        attackPosition = GameObject.Find("Player Attack Pos");
         transform.position = Vector3.MoveTowards(transform.position, attackPosition.transform.position, spd * Time.deltaTime);
     }
 }
