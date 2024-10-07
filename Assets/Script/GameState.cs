@@ -11,6 +11,7 @@ public class GameState : MonoBehaviour
     public UnityEvent settingEvent;
     public bool paused;
     public bool settings;
+    public bool gameover;
     void Start()
     {
 
@@ -51,8 +52,14 @@ public class GameState : MonoBehaviour
     {
         settings = false;
     }
-    public void ExitToMainMenu()
+    public void ExitOrRetry()
     {
+        paused = false;
+        gameover = false;
         Time.timeScale = 1f;
+    }
+    public void GameOverEnter()
+    {
+        gameover = true;
     }
 }
