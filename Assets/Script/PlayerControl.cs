@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D rb;
 
     public bool moveLeft;
+    public bool dead;
     public Animator animation;
     public UnityEvent attackEvent;
     public UnityEvent passiveEvent;
@@ -26,7 +27,14 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        Walk();
+        if (!dead)
+        {
+            Walk();
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     void Walk()

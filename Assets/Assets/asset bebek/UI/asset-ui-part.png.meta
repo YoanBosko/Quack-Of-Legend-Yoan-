@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c314c30a0f7bd44bb5728cb0549d4d5
+guid: de29aab444c68d14e9fc737ddfee385e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,279 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite bebek_0
+      name: asset-ui-part_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2543
-        width: 2035
-        height: 2016
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -1017.5, y: -1008}
-        - {x: -1017.5, y: 1008}
-        - {x: 1017.5, y: 1008}
-        - {x: 1017.5, y: -16.07129}
-        - {x: 948.5, y: -131}
-        - {x: 1017.5, y: -239.85498}
-        - {x: 1017.5, y: -1008}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33f6324ee1a30d7449de56d913487b8c
-      internalID: 1769441884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_1
-      rect:
-        serializedVersion: 2
-        x: 2029
-        y: 2537
-        width: 1983
-        height: 2013
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -991.5, y: -1006.5}
-        - {x: -991.5, y: 1006.5}
-        - {x: 991.5, y: 1006.5}
-        - {x: 991.5, y: -30.190186}
-        - {x: 945.5, y: -98.5}
-        - {x: 991.5, y: -241.073}
-        - {x: 991.5, y: -1006.5}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cabdbc9c66e503e49accce4e8e353015
-      internalID: -1966887657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_2
-      rect:
-        serializedVersion: 2
-        x: 4006
-        y: 2543
-        width: 1953
-        height: 2007
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: affe383b0c96d9d4aba4222732962447
-      internalID: 1114192787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_3
-      rect:
-        serializedVersion: 2
-        x: 6044
-        y: 2537
-        width: 1929
-        height: 2022
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23fb49d020b1a88479f21859a030c350
-      internalID: -37139975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_4
-      rect:
-        serializedVersion: 2
-        x: 7991
-        y: 2543
-        width: 1953
-        height: 2013
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e86f371fa5130d40b2fcfd6724f9ab6
-      internalID: -1783280976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_5
-      rect:
-        serializedVersion: 2
-        x: 9950
-        y: 2543
-        width: 1989
-        height: 2016
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e9b8e9cccb079140bd578739a9a5700
-      internalID: -417036437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2046
-        height: 2010
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d093f33ea97e8a943a3bd52f8a4b652f
-      internalID: -1926075380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_7
-      rect:
-        serializedVersion: 2
-        x: 2065
-        y: 27
-        width: 2038
-        height: 1964
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4368fb660b006841ab4a186ace0491f
-      internalID: 358560938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_8
-      rect:
-        serializedVersion: 2
-        x: 4128
-        y: 9
-        width: 2013
-        height: 1995
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e886d606b652b2c459a3a65734eb4427
-      internalID: -2143208449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_9
-      rect:
-        serializedVersion: 2
-        x: 6172
-        y: 0
-        width: 2007
-        height: 2004
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7c30c0cf9764f04ea07bd760af441ab
-      internalID: 92657664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_10
-      rect:
-        serializedVersion: 2
-        x: 8258
-        y: 88
-        width: 2026
-        height: 1964
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49c662b30dc420d4fbe4bc0706339344
-      internalID: -978356897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_11
-      rect:
-        serializedVersion: 2
-        x: 10387
-        y: 0
-        width: 2035
-        height: 2040
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ba235ba699ff0b4d9f2b4a92c6b5d84
-      internalID: 392485205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite bebek_12
-      rect:
-        serializedVersion: 2
-        x: 12133
-        y: 2262
-        width: 276
-        height: 299
+        x: 24
+        y: 1309
+        width: 1635
+        height: 283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,8 +137,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00b5c7b621511e4488339e6130e17813
-      internalID: 2084795385
+      spriteID: 8c8d9fc9a419ea042b6f6d411c67d1f0
+      internalID: 1856441705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1014
+        width: 1635
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9137f9e8b359142bc1e60104d02f94
+      internalID: 793886954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 718
+        width: 1635
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8023a7d36da6184c8c6404f62ed8cbb
+      internalID: 178322070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_21
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 989
+        width: 512
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099c56994662aa34a999414b3e1204b7
+      internalID: -245242171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_23
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 892
+        width: 206
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe077ff09dd0cb5489a47d3a04c20618
+      internalID: 2127283682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_26
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 809
+        width: 148
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed4797fa94474840a98e69b5e95d408
+      internalID: 1670298577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_29
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 431
+        width: 1635
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5329d9fa8347a488bfaa06dde62416
+      internalID: 545899212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_30
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 592
+        width: 563
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a68424c0d6ff534ebf59c40b8e267ce
+      internalID: 1043665878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset-ui-part_32
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 374
+        width: 563
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ae294aba1b8a643993272f4d3ad194
+      internalID: -1239891194
       vertices: []
       indices: 
       edges: []
@@ -420,19 +322,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite bebek_0: 1769441884
-      Sprite bebek_1: -1966887657
-      Sprite bebek_10: -978356897
-      Sprite bebek_11: 392485205
-      Sprite bebek_12: 2084795385
-      Sprite bebek_2: 1114192787
-      Sprite bebek_3: -37139975
-      Sprite bebek_4: -1783280976
-      Sprite bebek_5: -417036437
-      Sprite bebek_6: -1926075380
-      Sprite bebek_7: 358560938
-      Sprite bebek_8: -2143208449
-      Sprite bebek_9: 92657664
+      asset-ui-part_0: -1608633601
+      asset-ui-part_1: 533796323
+      asset-ui-part_10: 1235849266
+      asset-ui-part_11: -2047358335
+      asset-ui-part_12: 410102932
+      asset-ui-part_13: 793886954
+      asset-ui-part_14: -858976886
+      asset-ui-part_15: -136871587
+      asset-ui-part_16: 287206461
+      asset-ui-part_17: -76994190
+      asset-ui-part_18: 541744029
+      asset-ui-part_19: 206133721
+      asset-ui-part_2: -1492586201
+      asset-ui-part_20: 178322070
+      asset-ui-part_21: -245242171
+      asset-ui-part_22: -782638701
+      asset-ui-part_23: 2127283682
+      asset-ui-part_24: -284154896
+      asset-ui-part_25: 1198655659
+      asset-ui-part_26: 1670298577
+      asset-ui-part_27: -1086021409
+      asset-ui-part_28: -537495081
+      asset-ui-part_29: 545899212
+      asset-ui-part_3: -706739277
+      asset-ui-part_30: 1043665878
+      asset-ui-part_31: 241156544
+      asset-ui-part_32: -1239891194
+      asset-ui-part_33: -851953885
+      asset-ui-part_34: -1998430209
+      asset-ui-part_4: 168601929
+      asset-ui-part_5: 128047473
+      asset-ui-part_6: 1929116529
+      asset-ui-part_7: 1856441705
+      asset-ui-part_8: 1273750189
+      asset-ui-part_9: 1646096835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

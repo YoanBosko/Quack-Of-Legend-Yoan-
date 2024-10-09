@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Enemy1;
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 0f, 2f);
+        InvokeRepeating("SpawnEnemy", 1f, 2f);
     }
 
     // Update is called once per frame

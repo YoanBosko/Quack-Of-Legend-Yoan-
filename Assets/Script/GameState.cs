@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public class GameState : MonoBehaviour
 {
-    GameObject playerObject;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
     public UnityEvent settingEvent;
+    public UnityEvent deadEvent;
     public bool paused;
     public bool settings;
     public bool gameover;
@@ -20,8 +20,7 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerObject = GameObject.Find("Player");
-        if (playerObject != null && Input.GetKeyDown(KeyCode.Escape) && paused == false)
+        if (gameover == false && Input.GetKeyDown(KeyCode.Escape) && paused == false)
         {
             paused = true;
             pauseEvent?.Invoke();
@@ -54,12 +53,17 @@ public class GameState : MonoBehaviour
     }
     public void ExitOrRetry()
     {
-        paused = false;
-        gameover = false;
         Time.timeScale = 1f;
     }
     public void GameOverEnter()
     {
         gameover = true;
+        StartCoroutine(GameOverDelay());
+    }
+    IEnumerator GameOverDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        deadEvent?.Invoke();
+        Time.timeScale = 0f;
     }
 }
