@@ -5,11 +5,13 @@ using UnityEngine.Events;
 
 public class PlayerStatus : MonoBehaviour
 {
-    public int hp, maxHp, atk, expCap, exp;
+    public int hp, maxHp, atk, expCap, exp, lvlCount;
     public float spd, haste;
     private EnemyStatus enemyStatus;
     private PlayerControl playerControl;
     public Animator animation;
+    public UnityEvent EXPCollect;
+    public UnityEvent lvlUp;
     public UnityEvent playerDead;
 
     void Start()
@@ -29,6 +31,29 @@ public class PlayerStatus : MonoBehaviour
             animation.SetBool("Dead", true);
             StartCoroutine(DeadAnimationDelay());
         }
+        if (exp >= expCap)
+        {
+            lvlUp?.Invoke();
+            int expCapTemp = expCap;
+            if (lvlCount < 10)
+            {
+                expCap += expCap * 2 / 10;
+            }
+            else if (lvlCount < 20)
+            {
+                expCap += expCap * 3 / 10;
+            }
+            else if (lvlCount < 35)
+            {
+                expCap += expCap * 4 / 10;
+            }
+            else
+            {
+                expCap += expCap * 5 / 10;
+            }
+            exp -= expCapTemp;
+            lvlCount++;
+        }
     }
     IEnumerator DeadAnimationDelay()
     {
@@ -39,9 +64,14 @@ public class PlayerStatus : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col2d)
     {
-        if (col2d.tag == "Enemy" )
+        if (col2d.tag == "Enemy")
         {
             InvokeRepeating("TakeDamage", 0f, 0.4f);
+        }
+        if (col2d.tag == "EXP")
+        {
+            EXPCollect?.Invoke();
+            exp += Random.Range(2, 5);
         }
     }
     void OnTriggerExit2D(Collider2D col)

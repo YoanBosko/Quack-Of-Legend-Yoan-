@@ -11,6 +11,7 @@ public class GameState : MonoBehaviour
     public UnityEvent deadEvent;
     public bool paused;
     public bool settings;
+    public bool leveling;
     public bool gameover;
     void Start()
     {
@@ -20,7 +21,7 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameover == false && Input.GetKeyDown(KeyCode.Escape) && paused == false)
+        if (!gameover && !paused && !leveling && Input.GetKeyDown(KeyCode.Escape))
         {
             paused = true;
             pauseEvent?.Invoke();
@@ -53,6 +54,16 @@ public class GameState : MonoBehaviour
     }
     public void ExitOrRetry()
     {
+        Time.timeScale = 1f;
+    }
+    public void LevelUp()
+    {
+        leveling = true;
+        Time.timeScale = 0f;
+    }
+    public void LevelUpExit()
+    {
+        leveling = false;
         Time.timeScale = 1f;
     }
     public void GameOverEnter()

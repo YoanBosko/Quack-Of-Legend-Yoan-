@@ -22,6 +22,7 @@ public class EXPControl : MonoBehaviour
     {
         if (follow)
         {
+            spd *= 2;
             transform.position = Vector2.MoveTowards(transform.position, playerObject.transform.position, spd * Time.deltaTime);
         }
     }
