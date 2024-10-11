@@ -10,6 +10,7 @@ TagManager:
   - EXP
   - EXPRadius
   - Audio
+  - Setting
   layers:
   - Default
   - TransparentFX

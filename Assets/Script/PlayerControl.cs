@@ -14,6 +14,7 @@ public class PlayerControl : MonoBehaviour
     public UnityEvent passiveEvent;
     private AttackScript attackScript;
     private PassiveScript passiveScript;
+    private GameState gameState;
     private PlayerStatus playerStatus;
     void Start()
     {
@@ -27,7 +28,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        if (!dead)
+        if (!dead || !gameState.paused)
         {
             Walk();
         }

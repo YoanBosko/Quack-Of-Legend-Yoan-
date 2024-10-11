@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 public class GameState : MonoBehaviour
 {
@@ -13,9 +15,12 @@ public class GameState : MonoBehaviour
     public bool settings;
     public bool leveling;
     public bool gameover;
+    public AudioMixer audioMixer;
+    private PlayerStatus playerStatus;
     void Start()
     {
-
+        audioMixer.SetFloat("BGM", PlayerPrefs.GetFloat("BGM"));
+        audioMixer.SetFloat("SFX", PlayerPrefs.GetFloat("SFX"));
     }
 
     // Update is called once per frame
@@ -59,6 +64,10 @@ public class GameState : MonoBehaviour
     public void LevelUp()
     {
         leveling = true;
+        // for (int i = 0; i < 4; i++)
+        // {
+        //     int randomNumber = Random.Range(0, playerStatus.listOfItem.Length);
+        // }
         Time.timeScale = 0f;
     }
     public void LevelUpExit()
@@ -77,4 +86,5 @@ public class GameState : MonoBehaviour
         deadEvent?.Invoke();
         Time.timeScale = 0f;
     }
+    
 }

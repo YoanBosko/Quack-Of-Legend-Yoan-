@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerStatus : MonoBehaviour
     public float spd, haste;
     public Slider slideHp;
     public Slider slideExp;
+    public TextMeshProUGUI lvlText;
+    public GameObject[] listOfItem;
     private EnemyStatus enemyStatus;
     private PlayerControl playerControl;
     public Animator animation;
@@ -27,6 +30,7 @@ public class PlayerStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lvlText.text = lvlCount.ToString();
         slideHp.maxValue = maxHp;
         slideHp.value = hp;
         slideExp.maxValue = expCap;
