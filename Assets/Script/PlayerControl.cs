@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        if (!dead || !gameState.paused)
+        if (!dead || !gameState.paused || !gameState.leveling)
         {
             Walk();
         }

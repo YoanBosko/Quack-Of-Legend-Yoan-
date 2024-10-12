@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,7 +150,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18, y: 1, z: 1}
+  m_LocalScale: {x: 31, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2001957037}
@@ -188,10 +187,20 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 5}
+  m_Offset: {x: 0, y: 4.23}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.5, y: 0}
+  - {x: -0.43064588, y: 0.0012102127}
+  - {x: -0.43064588, y: -1.6081371}
+  - {x: -0.09108378, y: -1.578623}
+  - {x: -0.09102149, y: -1.0554082}
+  - {x: -0.0019747964, y: -1.055783}
+  - {x: -0.002369306, y: 0.0011496544}
+  - {x: 0.1082091, y: 0.016052723}
+  - {x: 0.10843764, y: -1.0679159}
+  - {x: 0.46047682, y: -1.0617409}
+  - {x: 0.46047577, y: 0.00037145615}
   - {x: 0.5, y: 0}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -229,7 +238,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5}
+  m_Offset: {x: 0, y: -8.64}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.5, y: 0}
