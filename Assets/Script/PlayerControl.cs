@@ -12,8 +12,10 @@ public class PlayerControl : MonoBehaviour
     public Animator animation;
     public UnityEvent attackEvent;
     public UnityEvent passiveEvent;
+    public UnityEvent KnifeEvent;
     private AttackScript attackScript;
     private PassiveScript passiveScript;
+    private KnifeScript knifeScript;
     private GameState gameState;
     private PlayerStatus playerStatus;
     void Start()
@@ -21,20 +23,22 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         attackScript = FindAnyObjectByType<AttackScript>();
         passiveScript = FindAnyObjectByType<PassiveScript>();
+        knifeScript = FindAnyObjectByType<KnifeScript>();
         playerStatus = FindAnyObjectByType<PlayerStatus>();
+        gameState = FindAnyObjectByType<GameState>();
         InvokeRepeating("UsePassive", 10f, playerStatus.haste);
         InvokeRepeating("UseAttack", 3f, playerStatus.haste * 0.3f);
     }
 
     void Update()
     {
-        if (!dead || !gameState.paused || !gameState.leveling)
+        if (dead || gameState.paused || gameState.leveling)
         {
-            Walk();
+            rb.velocity = new Vector2(0, 0);
         }
         else
         {
-            rb.velocity = new Vector2(0, 0);
+            Walk();
         }
     }
 
@@ -93,5 +97,21 @@ public class PlayerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4827586f);
         attackScript.animation.SetBool("Attacking", false);
+    }
+
+    public void KnifeGet()
+    {
+        InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.5f);
+    }
+    void UseKnife()
+    {
+        KnifeEvent?.Invoke();
+        knifeScript.animation.SetBool("Knifing", true);
+        StartCoroutine(DelayKnife());
+    }
+    IEnumerator DelayKnife()
+    {
+        yield return new WaitForSeconds(0.673913f);
+        knifeScript.animation.SetBool("Knifing", false);
     }
 }

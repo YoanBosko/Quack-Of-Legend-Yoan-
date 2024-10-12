@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ac745c936a17834f8db18147498e383
+guid: 831ade93c7adeac498d301668445faee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,118 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bone sprite_0
+      name: blade sprite_0
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 0
+        width: 321
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cf6932a31e4e54cacacf1acff7947f
+      internalID: -52841474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blade sprite_1
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 158
+        width: 302
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fddc147e9a7aec44945f251ca21e53d
+      internalID: -1024634692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blade sprite_2
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 455
+        width: 416
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458f76a4600715a4cbe33d6070ee0a8b
+      internalID: 608439465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blade sprite_3
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 464
+        width: 339
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3c95a25c506834b96b5a5d629767a2
+      internalID: -639299869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blade sprite_4
+      rect:
+        serializedVersion: 2
+        x: 4396
+        y: 360
+        width: 297
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec85b7330f52b742843ecced147e526
+      internalID: 1655598300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blade sprite_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 2230
-        width: 1333
-        height: 1423
+        y: 373
+        width: 297
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8e58a468b4bb244919a4ade094c3bf
-      internalID: -1505819121
+      spriteID: b812fae8b80219040bb6172d32c4002f
+      internalID: 1098319255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone sprite_1
+      name: blade sprite_6
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 2217
-        width: 1272
-        height: 1462
+        x: 547
+        y: 130
+        width: 293
+        height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aa91ac6d861c3d469a6a4c709f34bba
-      internalID: -561550906
+      spriteID: d8704b7766b9af24a8d9de6357556f67
+      internalID: -385744128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone sprite_2
+      name: blade sprite_7
       rect:
         serializedVersion: 2
-        x: 2906
-        y: 2271
-        width: 1422
-        height: 1347
+        x: 2373
+        y: 33
+        width: 366
+        height: 424
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e93b97c380e539647b9a8483baf7455b
-      internalID: -977838042
+      spriteID: 8d308425b39626546bb2803762d7b28a
+      internalID: -1206371269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone sprite_3
+      name: blade sprite_8
       rect:
         serializedVersion: 2
-        x: 4438
-        y: 2306
-        width: 1468
-        height: 1272
+        x: 1825
+        y: 54
+        width: 452
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,92 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac6c46cc94651564e9003cdae54dff4e
-      internalID: 2112397955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone sprite_4
-      rect:
-        serializedVersion: 2
-        x: 5982
-        y: 2242
-        width: 1347
-        height: 1422
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 406f9c95a03775549a3e8f451beb8ec5
-      internalID: 404978546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone sprite_5
-      rect:
-        serializedVersion: 2
-        x: 7531
-        y: 2207
-        width: 1272
-        height: 1469
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f24deee48c9102c43b60e0e9b1d1ce85
-      internalID: 1370448247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone sprite_6
-      rect:
-        serializedVersion: 2
-        x: 8925
-        y: 2270
-        width: 1422
-        height: 1342
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92a70531fb15b7247baf1360a0d5c307
-      internalID: 516725531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone sprite_7
-      rect:
-        serializedVersion: 2
-        x: 10382
-        y: 2311
-        width: 1460
-        height: 1273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8776689a462ac31439b195fd0975ed41
-      internalID: 1453760067
+      spriteID: bc07b2f7188f8d546a4c33af48547e92
+      internalID: 1467002772
       vertices: []
       indices: 
       edges: []
@@ -301,14 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bone sprite_0: -1505819121
-      bone sprite_1: -561550906
-      bone sprite_2: -977838042
-      bone sprite_3: 2112397955
-      bone sprite_4: 404978546
-      bone sprite_5: 1370448247
-      bone sprite_6: 516725531
-      bone sprite_7: 1453760067
+      blade sprite_0: -52841474
+      blade sprite_1: -1024634692
+      blade sprite_2: 608439465
+      blade sprite_3: -639299869
+      blade sprite_4: 1655598300
+      blade sprite_5: 1098319255
+      blade sprite_6: -385744128
+      blade sprite_7: -1206371269
+      blade sprite_8: 1467002772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
