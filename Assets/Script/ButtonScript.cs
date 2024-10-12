@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
+    public Slider volumeSlider;
     public GameObject[] backsound;
     public void LoadScene(string aValue)
     {
@@ -14,6 +16,7 @@ public class ButtonScript : MonoBehaviour
 
     public void ExitGame()
     {
+
         Application.Quit();
         Debug.Log("Game Quit");
         UnityEditor.EditorApplication.isPlaying = false;
@@ -26,5 +29,15 @@ public class ButtonScript : MonoBehaviour
         {
             SceneManager.MoveGameObjectToScene(backs, SceneManager.GetActiveScene());   
         }
+    }
+
+    public void IncreaseVolume()
+    {
+        volumeSlider.value += 8;
+    }
+
+    public void DecreaseVolume()
+    {
+        volumeSlider.value -= 8;
     }
 }
