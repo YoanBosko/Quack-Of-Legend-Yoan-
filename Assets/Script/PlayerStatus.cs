@@ -12,6 +12,7 @@ public class PlayerStatus : MonoBehaviour
     public Slider slideHp;
     public Slider slideExp;
     public TextMeshProUGUI lvlText;
+    public TextMeshProUGUI[] statValue;
     public GameObject[] listOfItem;
     private EnemyStatus enemyStatus;
     private PlayerControl playerControl;
@@ -19,6 +20,7 @@ public class PlayerStatus : MonoBehaviour
     public UnityEvent EXPCollect;
     public UnityEvent lvlUp;
     public UnityEvent playerDead;
+    public UnityEvent takeDamage;
     
 
     void Start()
@@ -31,6 +33,9 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
         lvlText.text = lvlCount.ToString();
+        statValue[0].text = atk.ToString();
+        statValue[1].text = hp.ToString();
+        statValue[2].text = spd.ToString();
         slideHp.maxValue = maxHp;
         slideHp.value = hp;
         slideExp.maxValue = expCap;
@@ -95,6 +100,7 @@ public class PlayerStatus : MonoBehaviour
     }
     void TakeDamage()
     {
+        takeDamage?.Invoke();
         hp -= enemyStatus.atk;
     }
 }
