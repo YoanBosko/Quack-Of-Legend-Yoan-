@@ -4,6 +4,7 @@ using System.Data;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Audio;
+using System.Linq;
 
 public class GameState : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class GameState : MonoBehaviour
     public GameObject atkUP;
     public GameObject defUP;
     public GameObject spdUP;
-    public GameObject knifeObject;
-    public GameObject boneObject;
+    public GameObject[] knifeObject;
+    public GameObject[] boneObject;
+    public GameObject[] featherObject;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
     public UnityEvent settingEvent;
@@ -21,9 +23,11 @@ public class GameState : MonoBehaviour
     public bool settings;
     public bool leveling;
     public bool gameover;
-    public bool hpOn, atkOn, defOn, spdOn, knifeOn, boneOn;
+    public bool hpOn, atkOn, defOn, spdOn, knifeOn, boneOn, featherOn;
+    public int knifeBuffCount = 0, boneBuffCount = 0, featherBuffCount = 0;
     public AudioMixer audioMixer;
     private PlayerStatus playerStatus;
+    private PlayerControl playerControl;
     private int slot;
     void Start()
     {
@@ -75,7 +79,7 @@ public class GameState : MonoBehaviour
         slot = 0;
         while (slot < 4)
         {
-            switch (Random.Range(1, 7))
+            switch (Random.Range(1, 8))
             {
                 case 1:
                     if (!hpOn)
@@ -112,7 +116,30 @@ public class GameState : MonoBehaviour
                 case 5:
                     if (!knifeOn)
                     {
-                        knifeObject.SetActive(true);
+                        if (knifeBuffCount == 0)
+                        {
+                            knifeObject[0].SetActive(true);
+                        }
+                        else if (knifeBuffCount == 1)
+                        {
+                            knifeObject[1].SetActive(true);
+                        }
+                        else if (knifeBuffCount == 2)
+                        {
+                            knifeObject[2].SetActive(true);
+                        }
+                        else if (knifeBuffCount == 3)
+                        {
+                            knifeObject[3].SetActive(true);
+                        }
+                        else if (knifeBuffCount == 4)
+                        {
+                            knifeObject[4].SetActive(true);
+                        }
+                        else
+                        {
+                            slot--;
+                        }
                         knifeOn = true;
                         slot++;
                     }
@@ -120,8 +147,62 @@ public class GameState : MonoBehaviour
                 case 6:
                     if (!boneOn)
                     {
-                        boneObject.SetActive(true);
+                        if (boneBuffCount == 0)
+                        {
+                            boneObject[0].SetActive(true);
+                        }
+                        else if (boneBuffCount == 1)
+                        {
+                            boneObject[1].SetActive(true);
+                        }
+                        else if (boneBuffCount == 2)
+                        {
+                            boneObject[2].SetActive(true);
+                        }
+                        else if (boneBuffCount == 3)
+                        {
+                            boneObject[3].SetActive(true);
+                        }
+                        else if (boneBuffCount == 4)
+                        {
+                            boneObject[4].SetActive(true);
+                        }
+                        else
+                        {
+                            slot--;
+                        }
                         boneOn = true;
+                        slot++;
+                    }
+                    break;
+                case 7:
+                    if (!featherOn)
+                    {
+                        if (featherBuffCount == 0)
+                        {
+                            featherObject[0].SetActive(true);
+                        }
+                        else if (featherBuffCount == 1)
+                        {
+                            featherObject[1].SetActive(true);
+                        }
+                        else if (featherBuffCount == 2)
+                        {
+                            featherObject[2].SetActive(true);
+                        }
+                        else if (featherBuffCount == 3)
+                        {
+                            featherObject[3].SetActive(true);
+                        }
+                        else if (featherBuffCount == 4)
+                        {
+                            featherObject[4].SetActive(true);
+                        }
+                        else
+                        {
+                            slot--;
+                        }
+                        featherOn = true;
                         slot++;
                     }
                     break;
@@ -142,9 +223,86 @@ public class GameState : MonoBehaviour
         atkUP.SetActive(false);
         defUP.SetActive(false);
         spdUP.SetActive(false);
-        knifeObject.SetActive(false);
-        boneObject.SetActive(false);
+        foreach(GameObject knifeobj in knifeObject)
+        {
+            knifeobj.SetActive(false);
+        }
+        foreach(GameObject boneobj in boneObject)
+        {
+            boneobj.SetActive(false);
+        }
+        foreach(GameObject featherobj in featherObject)
+        {
+            featherobj.SetActive(false);
+        }
         Time.timeScale = 1f;
+    }
+    public void KnifeUpgrade()
+    {
+        if (knifeBuffCount == 1)
+        {
+            // upgrade knife stk speed
+            playerControl.knifeUpgrade = 2;
+        }
+        else if (knifeBuffCount == 2)
+        {
+            // upgrade knife dmg
+        }
+        else if (knifeBuffCount == 3)
+        {
+            // add more knife
+        }
+        else if (knifeBuffCount == 4)
+        {
+            // upgrade knife atk size
+        }
+        else
+        {
+            slot--;
+        }
+    }
+    public void BoneUpgrade()
+    {
+        if (featherBuffCount == 1)
+        {
+            // upgrade bone throw speed
+            playerControl.boneUpgrade = 2;
+        }
+        else if (featherBuffCount == 2)
+        {
+            // add more bone
+        }
+        else if (featherBuffCount == 3)
+        {
+            // upgrade bone radius
+        }
+        else
+        {
+            slot--;
+        }
+    }
+    public void FeatherUpgrade()
+    {
+        if (knifeBuffCount == 1)
+        {
+            // upgrade feather stk speed
+        }
+        else if (knifeBuffCount == 2)
+        {
+            // upgrade feather dmg
+        }
+        else if (knifeBuffCount == 3)
+        {
+            // add more feather
+        }
+        else if (knifeBuffCount == 4)
+        {
+            // upgrade feather atk size
+        }
+        else
+        {
+            slot--;
+        }
     }
     public void GameOverEnter()
     {

@@ -20,6 +20,7 @@ public class PlayerControl : MonoBehaviour
     private KnifeScript knifeScript;
     private GameState gameState;
     private PlayerStatus playerStatus;
+    public int knifeUpgrade, boneUpgrade;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -103,7 +104,7 @@ public class PlayerControl : MonoBehaviour
 
     public void KnifeGet()
     {
-        InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.65f);
+        InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.65f - knifeUpgrade);
     }
     void UseKnife()
     {
@@ -118,7 +119,7 @@ public class PlayerControl : MonoBehaviour
     }
     public void BoneGet()
     {
-        InvokeRepeating("UseBone", 5f, playerStatus.haste * 0.8f);
+        InvokeRepeating("UseBone", 5f, playerStatus.haste * 0.8f - boneUpgrade);
     }
     void UseBone()
     {
