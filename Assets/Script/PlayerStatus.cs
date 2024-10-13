@@ -21,7 +21,7 @@ public class PlayerStatus : MonoBehaviour
     public UnityEvent lvlUp;
     public UnityEvent playerDead;
     public UnityEvent takeDamage;
-    
+
 
     void Start()
     {
@@ -89,6 +89,11 @@ public class PlayerStatus : MonoBehaviour
         {
             EXPCollect?.Invoke();
             exp += Random.Range(2, 5);
+        }
+        if (col2d.tag == "Sumpit")
+        {
+            hp -= enemyStatus.atk;
+            //jangan diubah agak ngebug ke trigger 2x tapi emng niat atk*2 anggap aja fitur
         }
     }
     void OnTriggerExit2D(Collider2D col)

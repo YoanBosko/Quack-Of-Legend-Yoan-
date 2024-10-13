@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9227,6 +9226,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy1: {fileID: 6747607488157548037, guid: ea22ced3093be064eb129ef2ae2c30fa, type: 3}
+  Enemy2: {fileID: 2512126459743407106, guid: a00e2503e63762147bb26c953847ba0d, type: 3}
+  timeCounter: 0
+  meeleLeft: 0
+  meeleRight: 0
+  rangedLeft: 0
+  rangedRight: 0
 --- !u!4 &1510384797
 Transform:
   m_ObjectHideFlags: 0
@@ -11932,8 +11937,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082483e516283a640b40de892a25f53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 80
-  maxHp: 80
+  hp: 100
+  maxHp: 100
   atk: 5
   expCap: 50
   exp: 0
