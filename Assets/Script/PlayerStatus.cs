@@ -8,7 +8,7 @@ using TMPro;
 public class PlayerStatus : MonoBehaviour
 {
     public int hp, maxHp, atk, expCap, exp, lvlCount;
-    public float spd, haste;
+    public float spd, haste, def;
     public Slider slideHp;
     public Slider slideExp;
     public TextMeshProUGUI lvlText;

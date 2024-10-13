@@ -8,6 +8,7 @@ public class EnemyChefM : MonoBehaviour
 {
     Rigidbody2D rb;
     GameObject playerObject;
+    GameObject bone;
     public GameObject maxPos;
     public GameObject minPos;
     public GameObject exp;
@@ -16,6 +17,7 @@ public class EnemyChefM : MonoBehaviour
     int hp;
 
     public bool moveLeft;
+    public bool followBone;
     public bool dead;
     public Animator animation;
     BoxCollider2D boxCol2d;
@@ -34,7 +36,7 @@ public class EnemyChefM : MonoBehaviour
     void Update()
     {
         Walk();
-        if (hp <= 0 && dead == false)
+        if (hp <= 0 && !dead)
         {
             boxCol2d = GetComponent<BoxCollider2D>();
             boxCol2d.enabled = false;
@@ -65,7 +67,13 @@ public class EnemyChefM : MonoBehaviour
                 transform.localScale = new Vector3(-1f, 1f, 1f);
                 moveLeft = true;
             }
-            if (dead != true)
+            if (followBone && !dead)
+            {
+                bone = GameObject.Find("Bone(Clone)");
+                transform.position = Vector2.MoveTowards(transform.position, bone.transform.position, enemyStatus.spd * Time.deltaTime);
+                animation.SetBool("Moving", true);
+            }
+            else if (!dead)
             {
                 transform.position = Vector2.MoveTowards(transform.position, playerObject.transform.position, enemyStatus.spd * Time.deltaTime);
                 animation.SetBool("Moving", true);
@@ -96,6 +104,23 @@ public class EnemyChefM : MonoBehaviour
         {
             hp -= playerStatus.atk / 2;
             hitEvent?.Invoke();
+        }
+        if (col2d.tag == "Knife")
+        {
+            hp -= playerStatus.atk / 2;
+            hitEvent?.Invoke();
+        }
+        if (col2d.tag == "BoneRadius")
+        {
+            followBone = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag == "BoneRadius")
+        {
+            followBone = false;
         }
     }
 

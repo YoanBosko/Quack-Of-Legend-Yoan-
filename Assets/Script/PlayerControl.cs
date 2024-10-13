@@ -10,9 +10,11 @@ public class PlayerControl : MonoBehaviour
     public bool moveLeft;
     public bool dead;
     public Animator animation;
+    public GameObject bone;
     public UnityEvent attackEvent;
     public UnityEvent passiveEvent;
-    public UnityEvent KnifeEvent;
+    public UnityEvent knifeEvent;
+    public UnityEvent boneEvent;
     private AttackScript attackScript;
     private PassiveScript passiveScript;
     private KnifeScript knifeScript;
@@ -101,11 +103,11 @@ public class PlayerControl : MonoBehaviour
 
     public void KnifeGet()
     {
-        InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.5f);
+        InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.65f);
     }
     void UseKnife()
     {
-        KnifeEvent?.Invoke();
+        knifeEvent?.Invoke();
         knifeScript.animation.SetBool("Knifing", true);
         StartCoroutine(DelayKnife());
     }
@@ -113,5 +115,15 @@ public class PlayerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(0.673913f);
         knifeScript.animation.SetBool("Knifing", false);
+    }
+    public void BoneGet()
+    {
+        InvokeRepeating("UseBone", 5f, playerStatus.haste * 0.8f);
+    }
+    void UseBone()
+    {
+        boneEvent?.Invoke();
+        GameObject boneDrop = Instantiate(bone);
+        boneDrop.transform.position = transform.position;
     }
 }
