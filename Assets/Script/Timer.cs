@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     public TextMeshProUGUI currentTime;
     public TextMeshProUGUI bestTime;
-    float elapsedTime;
+    public float elapsedTime;
     // Start is called before the first frame update
     void Start()
     {

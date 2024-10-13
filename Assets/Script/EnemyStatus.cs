@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStatus : MonoBehaviour
 {
     public int hp, atk;
+    public int lvl = 1;
     public float spd;
 
     public float timeCounter;
@@ -23,6 +24,7 @@ public class EnemyStatus : MonoBehaviour
             hp += 5;
             atk += 1;
             spd += 0.5f;
+            lvl++;
         }
     }
 }
