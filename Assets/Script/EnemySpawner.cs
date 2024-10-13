@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     {
         InvokeRepeating("SpawnEnemyM", 1f, 2f);
         InvokeRepeating("SpawnFixedM", 40f, 25f);
-        InvokeRepeating("SpawnEnemyR", 60f, 2f);
+        InvokeRepeating("SpawnEnemyR", 60f, 4f);
         InvokeRepeating("SpawnFixedR", 130f, 25f);
     }
 

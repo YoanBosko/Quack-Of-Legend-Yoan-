@@ -6,12 +6,15 @@ public class BoneController : MonoBehaviour
 {
     Vector2 min, max;
     Rigidbody2D rb;
+    private GameState gameState;
+    private Animator animator;
     public bool stop;
     public float spd, hp;
     float x, y;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gameState = FindAnyObjectByType<GameState>();
         min = Camera.main.ViewportToWorldPoint(new Vector2(0f, 0f));
         max = Camera.main.ViewportToWorldPoint(new Vector2(1f, 1f));
         x = Random.Range(min.x, max.x);
@@ -34,18 +37,30 @@ public class BoneController : MonoBehaviour
     }
     void Update()
     {
-        if (hp <= 0)
+        if (gameState.paused || gameState.gameover)
         {
-            Destroy(gameObject);
-        }
-        if (stop)
-        {
-            rb.velocity = new Vector3(0, 0);
-            rb.gravityScale = 0;
+            animator.speed = 0f;
+            if ((gameState.paused || gameState.gameover) && Time.timeScale == 1)
+            {
+                rb.velocity = new Vector3(0, 0);
+                rb.gravityScale = 0;
+            }
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x + x, transform.position.y + y, 10), spd * Time.deltaTime);
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+            if (stop)
+            {
+                rb.velocity = new Vector3(0, 0);
+                rb.gravityScale = 0;
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x + x, transform.position.y + y, 10), spd * Time.deltaTime);
+            }
         }
     }
 

@@ -32,7 +32,7 @@ public class EnemyRangedChef : MonoBehaviour
         gameState = FindAnyObjectByType<GameState>();
         enemyStatus = FindAnyObjectByType<EnemyStatus>();
         hp = enemyStatus.hp;
-        InvokeRepeating("ThrowSumpit", 1f, 4f);
+        InvokeRepeating("ThrowSumpit", 1f, 5f);
     }
 
     void Update()
