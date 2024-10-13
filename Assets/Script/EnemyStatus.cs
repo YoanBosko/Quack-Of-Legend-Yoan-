@@ -6,7 +6,8 @@ public class EnemyStatus : MonoBehaviour
 {
     public int hp, atk;
     public float spd;
-    private PlayerStatus playerStatus;
+
+    public float timeCounter;
     void Start()
     {
 
@@ -15,14 +16,13 @@ public class EnemyStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    public void statusUpdate()
-    {
-        hp *= 2;
-        if (playerStatus.lvlCount % 10 == 0)
+        timeCounter += Time.deltaTime;
+        if(timeCounter > 60f)
         {
-            atk *= 2;
+            timeCounter -= 60f;
+            hp += 5;
+            atk += 1;
+            spd += 0.5f;
         }
     }
 }
