@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Audio;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 
 public class GameState : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameState : MonoBehaviour
     public GameObject atkUP;
     public GameObject defUP;
     public GameObject spdUP;
+    public GameObject knifeRange, featherRange;
     public GameObject[] knifeObject;
     public GameObject[] boneObject;
     public GameObject[] featherObject;
@@ -26,8 +28,9 @@ public class GameState : MonoBehaviour
     public bool hpOn, atkOn, defOn, spdOn, knifeOn, boneOn, featherOn;
     public int knifeBuffCount = 0, boneBuffCount = 0, featherBuffCount = 0;
     public AudioMixer audioMixer;
-    private PlayerStatus playerStatus;
-    private PlayerControl playerControl;
+    public PlayerStatus playerStatus;
+    public PlayerControl playerControl;
+    public EnemyChefM enemyChefM;
     private int slot;
     void Start()
     {
@@ -163,10 +166,6 @@ public class GameState : MonoBehaviour
                         {
                             boneObject[3].SetActive(true);
                         }
-                        else if (boneBuffCount == 4)
-                        {
-                            boneObject[4].SetActive(true);
-                        }
                         else
                         {
                             slot--;
@@ -193,10 +192,6 @@ public class GameState : MonoBehaviour
                         else if (featherBuffCount == 3)
                         {
                             featherObject[3].SetActive(true);
-                        }
-                        else if (featherBuffCount == 4)
-                        {
-                            featherObject[4].SetActive(true);
                         }
                         else
                         {
@@ -237,71 +232,110 @@ public class GameState : MonoBehaviour
         }
         Time.timeScale = 1f;
     }
+    public void HpUp()
+    {
+        playerStatus.maxHp += 10;
+        playerStatus.hp += 10;
+    }
+    public void AtkUp()
+    {
+        playerStatus.atk += 3;
+    }
+    public void SpdUp()
+    {
+        playerStatus.spd += 0.5f;
+    }
+    public void HasteUp()
+    {
+        playerStatus.haste -= playerStatus.haste/10;
+    }
     public void KnifeUpgrade()
     {
-        if (knifeBuffCount == 1)
+        if (knifeBuffCount == 0)
+        {
+            knifeBuffCount++;
+        }
+        else if (knifeBuffCount == 1)
         {
             // upgrade knife stk speed
             playerControl.knifeUpgrade = 2;
+            knifeBuffCount++;
+            playerControl.Invoke("KnifeGet", 0);
         }
         else if (knifeBuffCount == 2)
         {
             // upgrade knife dmg
+            enemyChefM.addKnifeDmg = 5;
+            knifeBuffCount++;
         }
         else if (knifeBuffCount == 3)
         {
             // add more knife
+            knifeBuffCount++;
         }
         else if (knifeBuffCount == 4)
         {
             // upgrade knife atk size
-        }
-        else
-        {
-            slot--;
+            Vector3 knifeSize = new Vector3(0.7f,0.7f,0.7f);
+            knifeRange.transform.localScale = knifeSize;
+            knifeBuffCount++;
         }
     }
     public void BoneUpgrade()
     {
-        if (featherBuffCount == 1)
+        if (boneBuffCount == 0)
+        {
+            boneBuffCount++;
+        }
+        if (boneBuffCount == 1)
         {
             // upgrade bone throw speed
             playerControl.boneUpgrade = 2;
+            boneBuffCount++;
+            playerControl.Invoke("BoneGet",0);
         }
-        else if (featherBuffCount == 2)
+        else if (boneBuffCount == 2)
         {
             // add more bone
+            playerControl.doubleBone = true;
+            boneBuffCount++;
+            playerControl.Invoke("BoneGet",0);
         }
-        else if (featherBuffCount == 3)
+        else if (boneBuffCount == 3)
         {
             // upgrade bone radius
-        }
-        else
-        {
-            slot--;
+            GameObject bone = GameObject.Find("Bone Radius");
+            Vector3 boneRadius = new Vector3(2,2,2);
+            bone.transform.localScale = boneRadius;
+            boneBuffCount++;
         }
     }
     public void FeatherUpgrade()
     {
-        if (knifeBuffCount == 1)
+        if (featherBuffCount == 0)
         {
             // upgrade feather stk speed
+            playerControl.featherUpgrade = 1;
+            featherBuffCount++;
+            playerControl.Invoke("RestartInvokeUseAttack",0f);
         }
-        else if (knifeBuffCount == 2)
+        else if (featherBuffCount == 1)
         {
             // upgrade feather dmg
+            enemyChefM.addFeatherDmg = 7;
+            featherBuffCount++;
         }
-        else if (knifeBuffCount == 3)
+        else if (featherBuffCount == 2)
         {
             // add more feather
+            featherBuffCount++;
         }
-        else if (knifeBuffCount == 4)
+        else if (featherBuffCount == 3)
         {
             // upgrade feather atk size
-        }
-        else
-        {
-            slot--;
+            Vector3 featherSize = new Vector3(2,2,2);
+            featherRange.transform.localScale = featherSize;
+            featherBuffCount++;
         }
     }
     public void GameOverEnter()

@@ -14,7 +14,8 @@ public class EnemyChefM : MonoBehaviour
     public GameObject exp;
     public UnityEvent hitEvent;
 
-    int hp;
+    int hp; 
+    public int addKnifeDmg, addFeatherDmg;
 
     public bool moveLeft;
     public bool followBone;
@@ -97,7 +98,7 @@ public class EnemyChefM : MonoBehaviour
     {
         if (col2d.tag == "Attack")
         {
-            hp -= playerStatus.atk;
+            hp -= playerStatus.atk + addFeatherDmg;
             hitEvent?.Invoke();
         }
         if (col2d.tag == "Passive")
@@ -107,7 +108,7 @@ public class EnemyChefM : MonoBehaviour
         }
         if (col2d.tag == "Knife")
         {
-            hp -= playerStatus.atk / 2;
+            hp -= playerStatus.atk / 2 + addKnifeDmg;
             hitEvent?.Invoke();
         }
         if (col2d.tag == "BoneRadius")

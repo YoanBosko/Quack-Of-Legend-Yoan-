@@ -741,9 +741,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: BoneUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2292,9 +2292,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: KnifeGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: KnifeUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2837,9 +2837,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: FeatherUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2942,18 +2942,18 @@ RectTransform:
   - {fileID: 1963116282}
   - {fileID: 1989967617}
   - {fileID: 4661252650275557632}
-  - {fileID: 971613067}
-  - {fileID: 1047498371}
   - {fileID: 696567543}
   - {fileID: 444765241}
+  - {fileID: 971613067}
+  - {fileID: 1047498371}
   - {fileID: 1342336905}
+  - {fileID: 110535787}
   - {fileID: 2043363448}
   - {fileID: 1902038015}
-  - {fileID: 110535787}
-  - {fileID: 550377365}
-  - {fileID: 1784432703}
   - {fileID: 1734075218}
   - {fileID: 841593214}
+  - {fileID: 550377365}
+  - {fileID: 1784432703}
   m_Father: {fileID: 178140174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4018,9 +4018,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: KnifeGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: KnifeUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4868,6 +4868,8 @@ MonoBehaviour:
   atkUP: {fileID: 1412523108}
   defUP: {fileID: 1701596472}
   spdUP: {fileID: 1619047443}
+  knifeRange: {fileID: 790688382}
+  featherRange: {fileID: 1362505257}
   knifeObject:
   - {fileID: 5579119909101189110}
   - {fileID: 696567542}
@@ -5031,6 +5033,9 @@ MonoBehaviour:
   boneBuffCount: 0
   featherBuffCount: 0
   audioMixer: {fileID: 24100000, guid: b9d5d111b6e880849b50f9b3956723f5, type: 2}
+  playerStatus: {fileID: 1938262031}
+  playerControl: {fileID: 1938262026}
+  enemyChefM: {fileID: 4936474879054068348, guid: ea22ced3093be064eb129ef2ae2c30fa, type: 3}
 --- !u!4 &805108188
 Transform:
   m_ObjectHideFlags: 0
@@ -5630,9 +5635,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: FeatherUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5918,6 +5923,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1938262026}
         m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
         m_MethodName: KnifeGet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: KnifeUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6493,9 +6510,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: KnifeGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: KnifeUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8162,6 +8179,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: BoneUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1342336908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8906,6 +8935,18 @@ MonoBehaviour:
       - m_Target: {fileID: 805108187}
         m_TargetAssemblyTypeName: GameState, Assembly-CSharp
         m_MethodName: LevelUpExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: AtkUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10283,9 +10324,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: FeatherUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10734,9 +10775,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: FeatherUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11365,9 +11406,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: BoneUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11668,6 +11709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveLeft: 0
   dead: 0
+  doubleBone: 0
   animation: {fileID: 1938262030}
   bone: {fileID: 8293807096248987070, guid: 55d6e0c320994054fa0feb842f80fcd6, type: 3}
   attackEvent:
@@ -11732,6 +11774,7 @@ MonoBehaviour:
         m_CallState: 2
   knifeUpgrade: 0
   boneUpgrade: 0
+  featherUpgrade: 0
 --- !u!61 &1938262027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12671,6 +12714,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: SpdUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1989967620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13094,9 +13149,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1938262026}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: BoneGet
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: BoneUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13397,6 +13452,18 @@ MonoBehaviour:
       - m_Target: {fileID: 805108187}
         m_TargetAssemblyTypeName: GameState, Assembly-CSharp
         m_MethodName: LevelUpExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: HpUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13908,6 +13975,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1938262026}
         m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
         m_MethodName: KnifeGet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 805108187}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: KnifeUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

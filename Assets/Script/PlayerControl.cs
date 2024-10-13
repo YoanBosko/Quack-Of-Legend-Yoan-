@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D rb;
 
     public bool moveLeft;
-    public bool dead;
+    public bool dead, doubleBone = false;
     public Animator animation;
     public GameObject bone;
     public UnityEvent attackEvent;
@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
     private KnifeScript knifeScript;
     private GameState gameState;
     private PlayerStatus playerStatus;
-    public int knifeUpgrade, boneUpgrade;
+    public int knifeUpgrade, boneUpgrade, featherUpgrade;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,7 +30,7 @@ public class PlayerControl : MonoBehaviour
         playerStatus = FindAnyObjectByType<PlayerStatus>();
         gameState = FindAnyObjectByType<GameState>();
         InvokeRepeating("UsePassive", 10f, playerStatus.haste);
-        InvokeRepeating("UseAttack", 3f, playerStatus.haste * 0.3f);
+        InvokeRepeating("UseAttack", 3f, playerStatus.haste * 0.3f - featherUpgrade);
     }
 
     void Update()
@@ -83,6 +83,11 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(0.5945946f);
         passiveScript.animation.SetBool("PassiveOn", false);
     }
+    public void RestartInvokeUseAttack()
+    {
+        CancelInvoke("UseAttack");
+        InvokeRepeating("UseAttack", 3f, playerStatus.haste * 0.3f - featherUpgrade);
+    }
 
     void UseAttack()
     {
@@ -104,6 +109,7 @@ public class PlayerControl : MonoBehaviour
 
     public void KnifeGet()
     {
+        CancelInvoke("UseKnife");
         InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.65f - knifeUpgrade);
     }
     void UseKnife()
@@ -119,7 +125,12 @@ public class PlayerControl : MonoBehaviour
     }
     public void BoneGet()
     {
+        CancelInvoke("UseBone");
         InvokeRepeating("UseBone", 5f, playerStatus.haste * 0.8f - boneUpgrade);
+        if (doubleBone)
+        {
+            InvokeRepeating("UseBone", 1f, playerStatus.haste * 0.8f - boneUpgrade);
+        }
     }
     void UseBone()
     {

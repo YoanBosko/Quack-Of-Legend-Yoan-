@@ -30,13 +30,11 @@ public class BackgroundRepeater : MonoBehaviour
         // Jika pemain bergerak ke kanan dan melewati background kanan
         if (player.position.x > rightBoundary - backgroundWidth)
         {
-            Debug.Log("true");
             ShiftBackground(Vector3.right);
         }
         // Jika pemain bergerak ke kiri dan melewati background kiri
         else if (player.position.x < leftBoundary + backgroundWidth)
         {
-            Debug.Log("false");
             ShiftBackground(Vector3.left);
         }
     }
