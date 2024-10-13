@@ -12,20 +12,16 @@ public class GameState : MonoBehaviour
     public GameObject defUP;
     public GameObject spdUP;
     public GameObject knifeObject;
+    public GameObject boneObject;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
     public UnityEvent settingEvent;
     public UnityEvent deadEvent;
-    public UnityEvent activateHP;
-    public UnityEvent activateATK;
-    public UnityEvent activateDEF;
-    public UnityEvent activateSPD;
-    public UnityEvent activateKnife;
     public bool paused;
     public bool settings;
     public bool leveling;
     public bool gameover;
-    public bool hpOn, atkOn, defOn, spdOn, knifeOn;
+    public bool hpOn, atkOn, defOn, spdOn, knifeOn, boneOn;
     public AudioMixer audioMixer;
     private PlayerStatus playerStatus;
     private int slot;
@@ -79,12 +75,12 @@ public class GameState : MonoBehaviour
         slot = 0;
         while (slot < 4)
         {
-            switch (Random.Range(1, 6))
+            switch (Random.Range(1, 7))
             {
                 case 1:
                     if (!hpOn)
                     {
-                        activateHP?.Invoke();
+                        hpUP.SetActive(true);
                         hpOn = true;
                         slot++;
                     }
@@ -92,7 +88,7 @@ public class GameState : MonoBehaviour
                 case 2:
                     if (!atkOn)
                     {
-                        activateATK?.Invoke();
+                        atkUP.SetActive(true);
                         atkOn = true;
                         slot++;
                     }
@@ -100,7 +96,7 @@ public class GameState : MonoBehaviour
                 case 3:
                     if (!defOn)
                     {
-                        activateDEF?.Invoke();
+                        defUP.SetActive(true);
                         defOn = true;
                         slot++;
                     }
@@ -108,7 +104,7 @@ public class GameState : MonoBehaviour
                 case 4:
                     if (!spdOn)
                     {
-                        activateSPD?.Invoke();
+                        spdUP.SetActive(true);
                         spdOn = true;
                         slot++;
                     }
@@ -116,8 +112,16 @@ public class GameState : MonoBehaviour
                 case 5:
                     if (!knifeOn)
                     {
-                        activateKnife?.Invoke();
+                        knifeObject.SetActive(true);
                         knifeOn = true;
+                        slot++;
+                    }
+                    break;
+                case 6:
+                    if (!boneOn)
+                    {
+                        boneObject.SetActive(true);
+                        boneOn = true;
                         slot++;
                     }
                     break;
@@ -133,11 +137,13 @@ public class GameState : MonoBehaviour
         defOn = false;
         spdOn = false;
         knifeOn = false;
+        boneOn = false;
         hpUP.SetActive(false);
         atkUP.SetActive(false);
         defUP.SetActive(false);
         spdUP.SetActive(false);
         knifeObject.SetActive(false);
+        boneObject.SetActive(false);
         Time.timeScale = 1f;
     }
     public void GameOverEnter()

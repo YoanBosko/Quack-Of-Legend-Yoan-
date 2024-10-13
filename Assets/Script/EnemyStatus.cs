@@ -6,10 +6,11 @@ public class EnemyStatus : MonoBehaviour
 {
     public int hp, atk;
     public float spd;
+
     public float timeCounter;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

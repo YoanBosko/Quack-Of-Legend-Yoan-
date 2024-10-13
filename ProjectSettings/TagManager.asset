@@ -11,11 +11,14 @@ TagManager:
   - EXPRadius
   - Audio
   - Setting
+  - Knife
+  - Bone
+  - BoneRadius
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bones
   - Water
   - UI
   - Enemy
