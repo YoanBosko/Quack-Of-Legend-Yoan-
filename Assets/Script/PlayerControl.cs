@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D rb;
 
     public bool moveLeft;
-    public bool dead, doubleBone = false;
+    public bool dead, doubleBone = false, doubleknife = false;
     public Animator animation;
     public GameObject bone;
     public UnityEvent feather;
@@ -127,6 +127,10 @@ public class PlayerControl : MonoBehaviour
     {
         CancelInvoke("UseKnife");
         InvokeRepeating("UseKnife", 5f, playerStatus.haste * 0.65f - knifeUpgrade);
+        if (doubleknife)
+        {
+            InvokeRepeating("UseKnife", 4.3f, playerStatus.haste * 0.65f - knifeUpgrade);
+        }
     }
     void UseKnife()
     {

@@ -19,7 +19,7 @@ public class ButtonScript : MonoBehaviour
 
         Application.Quit();
         Debug.Log("Game Quit");
-        UnityEditor.EditorApplication.isPlaying = false;
+        // UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void CutSound()

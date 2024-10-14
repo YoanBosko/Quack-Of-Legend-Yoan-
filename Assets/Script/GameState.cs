@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Audio;
 using System.Linq;
-using UnityEditor.Experimental.GraphView;
+// using UnityEditor.Experimental.GraphView;
 
 public class GameState : MonoBehaviour
 {
@@ -245,7 +245,7 @@ public class GameState : MonoBehaviour
     }
     public void DefUp()
     {
-        playerStatus.def += 1;
+        playerStatus.def += 2;
     }
     public void SpdUp()
     {
@@ -277,7 +277,9 @@ public class GameState : MonoBehaviour
         else if (knifeBuffCount == 3)
         {
             // add more knife
+            playerControl.doubleknife = true;
             knifeBuffCount++;
+            playerControl.Invoke("KnifeGet", 0);
         }
         else if (knifeBuffCount == 4)
         {
