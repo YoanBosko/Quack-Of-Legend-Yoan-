@@ -508,7 +508,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 389566726}
           m_TargetAssemblyTypeName: SFX, Assembly-CSharp
           m_MethodName: SoundFx
           m_Mode: 2
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 389566726}
         m_TargetAssemblyTypeName: SFX, Assembly-CSharp
         m_MethodName: SoundFx
         m_Mode: 2
@@ -1548,7 +1548,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 389566726}
           m_TargetAssemblyTypeName: SFX, Assembly-CSharp
           m_MethodName: SoundFx
           m_Mode: 2
@@ -1604,7 +1604,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 389566726}
         m_TargetAssemblyTypeName: SFX, Assembly-CSharp
         m_MethodName: SoundFx
         m_Mode: 2
@@ -1949,8 +1949,14 @@ MonoBehaviour:
   atkUP: {fileID: 0}
   defUP: {fileID: 0}
   spdUP: {fileID: 0}
-  knifeObject: {fileID: 0}
-  boneObject: {fileID: 0}
+  knifeRange: {fileID: 0}
+  featherRange: {fileID: 0}
+  knifeObject:
+  - {fileID: 0}
+  boneObject:
+  - {fileID: 0}
+  featherObject: []
+  secondFeatherActivation: {fileID: 0}
   pauseEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1973,7 +1979,14 @@ MonoBehaviour:
   spdOn: 0
   knifeOn: 0
   boneOn: 0
+  featherOn: 0
+  knifeBuffCount: 0
+  boneBuffCount: 0
+  featherBuffCount: 0
   audioMixer: {fileID: 24100000, guid: b9d5d111b6e880849b50f9b3956723f5, type: 2}
+  playerStatus: {fileID: 0}
+  playerControl: {fileID: 0}
+  enemyChefM: {fileID: 0}
 --- !u!1 &1091495737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,7 +2070,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1930458901}
   m_HandleRect: {fileID: 556926156}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -40
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -2331,7 +2344,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1266811590}
   m_HandleRect: {fileID: 1919098773}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -40
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -2751,7 +2764,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 389566726}
           m_TargetAssemblyTypeName: SFX, Assembly-CSharp
           m_MethodName: SoundFx
           m_Mode: 2
@@ -2807,7 +2820,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 389566726}
         m_TargetAssemblyTypeName: SFX, Assembly-CSharp
         m_MethodName: SoundFx
         m_Mode: 2
@@ -2937,7 +2950,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 389566726}
           m_TargetAssemblyTypeName: SFX, Assembly-CSharp
           m_MethodName: SoundFx
           m_Mode: 2
@@ -3017,13 +3030,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 389566726}
+        m_TargetAssemblyTypeName: SFX, Assembly-CSharp
+        m_MethodName: SoundFx
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8300000, guid: 021ee311a836b7f42a91eb9cfbf4feb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3365,7 +3378,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 389566726}
           m_TargetAssemblyTypeName: SFX, Assembly-CSharp
           m_MethodName: SoundFx
           m_Mode: 2
@@ -3421,7 +3434,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 389566726}
         m_TargetAssemblyTypeName: SFX, Assembly-CSharp
         m_MethodName: SoundFx
         m_Mode: 2

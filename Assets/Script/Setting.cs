@@ -24,16 +24,47 @@ public class Setting : MonoBehaviour
     }
     public void SaveToPlayerPrefs()
     {
-        PlayerPrefs.SetFloat("BGM", sliderBGM.value);
-        PlayerPrefs.SetFloat("SFX", sliderSFX.value);
+        if (sliderBGM.value == -40)
+        {
+            PlayerPrefs.SetFloat("BGM", -80);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("BGM", sliderBGM.value);
+        }
+        if (sliderSFX.value == -40)
+        {
+            PlayerPrefs.SetFloat("SFX", -80);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("SFX", sliderSFX.value);
+        }
+        // PlayerPrefs.SetFloat("BGM", sliderBGM.value);
+        // PlayerPrefs.SetFloat("SFX", sliderSFX.value);
     }
     public void SetBGMVolume(float volume)
     {
-        audioMixer.SetFloat("BGM", volume);
+        if (volume == -40)
+        {
+            audioMixer.SetFloat("BGM", -80);
+        }
+        else
+        {
+            audioMixer.SetFloat("BGM", volume);
+        }
     }
     public void SetSFXVolume(float volume)
     {
-        audioMixer.SetFloat("SFX", volume);
+        if (volume == -40)
+        {
+            audioMixer.SetFloat("SFX", -80);
+        }
+        else
+        {
+            audioMixer.SetFloat("SFX", volume);
+        }
+        
     }
 
 }

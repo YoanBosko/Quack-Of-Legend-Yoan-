@@ -33,11 +33,11 @@ public class ButtonScript : MonoBehaviour
 
     public void IncreaseVolume()
     {
-        volumeSlider.value += 8;
+        volumeSlider.value += 4;
     }
 
     public void DecreaseVolume()
     {
-        volumeSlider.value -= 8;
+        volumeSlider.value -= 4;
     }
 }
