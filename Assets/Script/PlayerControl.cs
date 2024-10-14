@@ -24,7 +24,8 @@ public class PlayerControl : MonoBehaviour
     private KnifeScript knifeScript;
     private GameState gameState;
     private PlayerStatus playerStatus;
-    public int knifeUpgrade, boneUpgrade, featherUpgrade;
+    public int knifeUpgrade, boneUpgrade, featherUpgrade, pocketUpgrade, pocketRegenValue;
+    public float boostSpeed;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,7 +54,7 @@ public class PlayerControl : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(moveX * playerStatus.spd, moveY * playerStatus.spd);
+        rb.velocity = new Vector2(moveX * (playerStatus.spd + boostSpeed), moveY * (playerStatus.spd + boostSpeed));
 
         if (moveX != 0 || moveY != 0)
         {
@@ -157,5 +158,17 @@ public class PlayerControl : MonoBehaviour
         boneEvent?.Invoke();
         GameObject boneDrop = Instantiate(bone);
         boneDrop.transform.position = transform.position;
+    }
+    public void PocketGet()
+    {
+        CancelInvoke("UsePocketRegen");
+        InvokeRepeating("UsePocketRegen", 1f, 3f - pocketUpgrade);
+    }
+    public void UsePocketRegen()
+    {
+        if (playerStatus.hp <= playerStatus.maxHp - pocketRegenValue)
+        {
+            playerStatus.hp += pocketRegenValue;
+        }
     }
 }
