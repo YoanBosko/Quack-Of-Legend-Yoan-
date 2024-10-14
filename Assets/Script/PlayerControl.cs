@@ -11,6 +11,10 @@ public class PlayerControl : MonoBehaviour
     public bool dead, doubleBone = false;
     public Animator animation;
     public GameObject bone;
+    public UnityEvent feather;
+    public UnityEvent featherExit;
+    public UnityEvent feather2;
+    public UnityEvent feather2Exit;
     public UnityEvent attackEvent;
     public UnityEvent passiveEvent;
     public UnityEvent knifeEvent;
@@ -98,14 +102,26 @@ public class PlayerControl : MonoBehaviour
     IEnumerator AttackAnimationDelay()
     {
         yield return new WaitForSeconds(0.06f);
-        attackScript.animation.SetBool("Attacking", true);
+        feather?.Invoke();
+        feather2?.Invoke();
+        // if (gameState.featherBuffCount > 2)
+        // {
+        //     feather2?.Invoke();
+        // }
         StartCoroutine(DelayAttack());
     }
     IEnumerator DelayAttack()
     {
         yield return new WaitForSeconds(0.4827586f);
-        attackScript.animation.SetBool("Attacking", false);
+        featherExit?.Invoke();
+        feather2Exit?.Invoke();
+        // if (gameState.featherBuffCount > 2)
+        // {
+        //     feather2Exit?.Invoke();
+        // }
     }
+
+
 
     public void KnifeGet()
     {

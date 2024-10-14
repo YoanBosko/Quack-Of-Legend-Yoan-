@@ -6,8 +6,8 @@ public class AttackScript : MonoBehaviour
 {
     Rigidbody2D rb;
     public Animator animation;
-    GameObject attackPosition;
-    
+    public GameObject attackPosition;
+
     float spd = 100f;
     void Start()
     {
@@ -15,7 +15,15 @@ public class AttackScript : MonoBehaviour
     }
     void Update()
     {
-        attackPosition = GameObject.Find("Player Attack Pos");
         transform.position = Vector3.MoveTowards(transform.position, attackPosition.transform.position, spd * Time.deltaTime);
+    }
+
+    public void AttackOn()
+    {
+        animation.SetBool("Attacking", true);
+    }
+    public void AttackOff()
+    {
+        animation.SetBool("Attacking", false);
     }
 }

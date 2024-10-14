@@ -17,6 +17,7 @@ public class GameState : MonoBehaviour
     public GameObject[] knifeObject;
     public GameObject[] boneObject;
     public GameObject[] featherObject;
+    public GameObject secondFeatherActivation;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
     public UnityEvent settingEvent;
@@ -332,6 +333,7 @@ public class GameState : MonoBehaviour
         else if (featherBuffCount == 2)
         {
             // add more feather
+            secondFeatherActivation.SetActive(true);
             featherBuffCount++;
         }
         else if (featherBuffCount == 3)

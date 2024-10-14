@@ -53,15 +53,15 @@ public class PlayerStatus : MonoBehaviour
         {
             lvlUp?.Invoke();
             int expCapTemp = expCap;
-            if (lvlCount < 10)
+            if (lvlCount < 20)
             {
                 expCap += expCap * 2 / 10;
             }
-            else if (lvlCount < 20)
+            else if (lvlCount < 40)
             {
                 expCap += expCap * 3 / 10;
             }
-            else if (lvlCount < 35)
+            else if (lvlCount < 75)
             {
                 expCap += expCap * 4 / 10;
             }
