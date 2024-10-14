@@ -8,7 +8,8 @@ using TMPro;
 public class PlayerStatus : MonoBehaviour
 {
     public int hp, maxHp, atk, def, expCap, exp, lvlCount;
-    public float spd, haste;
+    public float spd, haste, countDown, skateboardMultiplier;
+    public bool countDownOn = false, getHitOn;
     public Slider slideHp;
     public Slider slideExp;
     public TextMeshProUGUI lvlText;
@@ -72,6 +73,24 @@ public class PlayerStatus : MonoBehaviour
             exp -= expCapTemp;
             lvlCount++;
         }
+        if(countDownOn)
+        {
+            countDown += Time.deltaTime;
+            if(getHitOn)
+            {
+                countDown = 0;
+            }
+            if(countDown > 5f)
+            {
+                playerControl.boostSpeed = spd * skateboardMultiplier;
+            }
+            else
+            {
+                playerControl.boostSpeed = 0;
+            }
+
+        }
+
     }
     IEnumerator DeadAnimationDelay()
     {
@@ -85,6 +104,7 @@ public class PlayerStatus : MonoBehaviour
         if (col2d.tag == "Enemy")
         {
             InvokeRepeating("TakeDamage", 0f, 0.4f);
+            getHitOn = true;
         }
         if (col2d.tag == "EXP")
         {
@@ -102,6 +122,7 @@ public class PlayerStatus : MonoBehaviour
         if (col.tag == "Enemy")
         {
             CancelInvoke("TakeDamage");
+            getHitOn = false;
         }
     }
     void TakeDamage()

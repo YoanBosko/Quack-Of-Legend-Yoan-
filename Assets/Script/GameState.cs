@@ -17,6 +17,8 @@ public class GameState : MonoBehaviour
     public GameObject[] knifeObject;
     public GameObject[] boneObject;
     public GameObject[] featherObject;
+    public GameObject[] pocketObject;
+    public GameObject[] skateboardObject;
     public GameObject secondFeatherActivation;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
@@ -26,8 +28,8 @@ public class GameState : MonoBehaviour
     public bool settings;
     public bool leveling;
     public bool gameover;
-    public bool hpOn, atkOn, defOn, spdOn, knifeOn, boneOn, featherOn;
-    public int knifeBuffCount = 0, boneBuffCount = 0, featherBuffCount = 0;
+    public bool hpOn, atkOn, defOn, spdOn, knifeOn, boneOn, featherOn, pocketOn, skateboardOn;
+    public int knifeBuffCount = 0, boneBuffCount = 0, featherBuffCount = 0, pocketBuffCount = 0, skateboardBuffCount = 0;
     public AudioMixer audioMixer;
     public PlayerStatus playerStatus;
     public PlayerControl playerControl;
@@ -83,7 +85,7 @@ public class GameState : MonoBehaviour
         slot = 0;
         while (slot < 4)
         {
-            switch (Random.Range(1, 8))
+            switch (Random.Range(1, 10))
             {
                 case 1:
                     if (!hpOn)
@@ -202,6 +204,48 @@ public class GameState : MonoBehaviour
                         slot++;
                     }
                     break;
+                case 8:
+                    if (!pocketOn)
+                    {
+                        if (pocketBuffCount == 0)
+                        {
+                            pocketObject[0].SetActive(true);
+                        }
+                        else if (pocketBuffCount == 1)
+                        {
+                            pocketObject[1].SetActive(true);
+                        }
+                        else if (pocketBuffCount == 2)
+                        {
+                            pocketObject[2].SetActive(true);
+                        }
+                        else
+                        {
+                            slot--;
+                        }
+                        pocketOn = true;
+                        slot++;
+                    }
+                    break;
+                case 9:
+                    if (!skateboardOn)
+                    {
+                        if (skateboardBuffCount == 0)
+                        {
+                            skateboardObject[0].SetActive(true);
+                        }
+                        else if (skateboardBuffCount == 1)
+                        {
+                            skateboardObject[1].SetActive(true);
+                        }
+                        else
+                        {
+                            slot--;
+                        }
+                        skateboardOn = true;
+                        slot++;
+                    }
+                    break;
             }
         }
         Time.timeScale = 0f;
@@ -216,6 +260,8 @@ public class GameState : MonoBehaviour
         knifeOn = false;
         boneOn = false;
         featherOn = false;
+        pocketOn = false;
+        skateboardOn = false;
         hpUP.SetActive(false);
         atkUP.SetActive(false);
         defUP.SetActive(false);
@@ -231,6 +277,14 @@ public class GameState : MonoBehaviour
         foreach (GameObject featherobj in featherObject)
         {
             featherobj.SetActive(false);
+        }
+        foreach (GameObject pocketobj in pocketObject)
+        {
+            pocketobj.SetActive(false);
+        }
+        foreach (GameObject skateboardobj in skateboardObject)
+        {
+            skateboardobj.SetActive(false);
         }
         Time.timeScale = 1f;
     }
@@ -345,6 +399,44 @@ public class GameState : MonoBehaviour
             Vector3 featherSize = new Vector3(2, 2, 2);
             featherRange.transform.localScale = featherSize;
             featherBuffCount++;
+        }
+    }
+    public void PocketUpgrade()
+    {
+        if (pocketBuffCount == 0)
+        {
+            // aktifin pocket get di PlayerControl lewat button
+            playerControl.pocketRegenValue = 2;
+            pocketBuffCount++;
+        }
+        else if (pocketBuffCount == 1)
+        {
+            // upgrade increase HP regen
+            playerControl.pocketRegenValue = 3;
+            pocketBuffCount++;
+        }
+        else if (pocketBuffCount == 2)
+        {
+            // aktifin pocket get di PlayerControl lewat button
+            // decrease interval time regen
+            playerControl.pocketUpgrade = 1;
+            pocketBuffCount++;
+        }
+    }
+    public void SkateboardUpgrade()
+    {
+        if (skateboardBuffCount == 0)
+        {
+            // upgrade feather stk speed
+            playerStatus.countDownOn = true;
+            playerStatus.skateboardMultiplier = 0.2f;
+            skateboardBuffCount++;
+        }
+        else if (skateboardBuffCount == 1)
+        {
+            // upgrade feather dmg
+            playerStatus.skateboardMultiplier = 0.5f;
+            skateboardBuffCount++;
         }
     }
     public void GameOverEnter()
