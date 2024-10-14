@@ -7,8 +7,8 @@ using TMPro;
 
 public class PlayerStatus : MonoBehaviour
 {
-    public int hp, maxHp, atk, expCap, exp, lvlCount;
-    public float spd, haste, def;
+    public int hp, maxHp, atk, def, expCap, exp, lvlCount;
+    public float spd, haste;
     public Slider slideHp;
     public Slider slideExp;
     public TextMeshProUGUI lvlText;
@@ -36,6 +36,7 @@ public class PlayerStatus : MonoBehaviour
         statValue[0].text = atk.ToString();
         statValue[1].text = hp.ToString();
         statValue[2].text = spd.ToString();
+        statValue[3].text = def.ToString();
         slideHp.maxValue = maxHp;
         slideHp.value = hp;
         slideExp.maxValue = expCap;
@@ -92,7 +93,7 @@ public class PlayerStatus : MonoBehaviour
         }
         if (col2d.tag == "Sumpit")
         {
-            hp -= enemyStatus.atk;
+            hp -= (enemyStatus.atk/def);
             //jangan diubah agak ngebug ke trigger 2x tapi emng niat atk*2 anggap aja fitur
         }
     }
@@ -106,6 +107,6 @@ public class PlayerStatus : MonoBehaviour
     void TakeDamage()
     {
         takeDamage?.Invoke();
-        hp -= enemyStatus.atk;
+        hp -= (enemyStatus.atk/def);
     }
 }

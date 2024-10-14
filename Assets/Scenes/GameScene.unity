@@ -3752,7 +3752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &667699180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5107,7 +5107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: kita gaada stat def
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11940,12 +11940,12 @@ MonoBehaviour:
   hp: 100
   maxHp: 100
   atk: 5
+  def: 1
   expCap: 50
   exp: 0
   lvlCount: 1
   spd: 5
   haste: 10
-  def: 0
   slideHp: {fileID: 708113997}
   slideExp: {fileID: 568494750}
   lvlText: {fileID: 1522993443}
@@ -11953,6 +11953,7 @@ MonoBehaviour:
   - {fileID: 1251922860}
   - {fileID: 1036649770}
   - {fileID: 1313096966}
+  - {fileID: 808267284}
   listOfItem:
   - {fileID: 2685395049551767291, guid: d696ea335083ece43b87eea9b3a83da0, type: 3}
   - {fileID: 6746844164922064837, guid: d2d28f3bc9325204dbcf86eb911b2dcd, type: 3}

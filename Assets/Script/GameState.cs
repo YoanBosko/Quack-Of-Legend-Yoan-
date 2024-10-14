@@ -218,15 +218,15 @@ public class GameState : MonoBehaviour
         atkUP.SetActive(false);
         defUP.SetActive(false);
         spdUP.SetActive(false);
-        foreach(GameObject knifeobj in knifeObject)
+        foreach (GameObject knifeobj in knifeObject)
         {
             knifeobj.SetActive(false);
         }
-        foreach(GameObject boneobj in boneObject)
+        foreach (GameObject boneobj in boneObject)
         {
             boneobj.SetActive(false);
         }
-        foreach(GameObject featherobj in featherObject)
+        foreach (GameObject featherobj in featherObject)
         {
             featherobj.SetActive(false);
         }
@@ -241,13 +241,17 @@ public class GameState : MonoBehaviour
     {
         playerStatus.atk += 3;
     }
+    public void DefUp()
+    {
+        playerStatus.def += 1;
+    }
     public void SpdUp()
     {
         playerStatus.spd += 0.5f;
     }
     public void HasteUp()
     {
-        playerStatus.haste -= playerStatus.haste/10;
+        playerStatus.haste -= playerStatus.haste / 10;
     }
     public void KnifeUpgrade()
     {
@@ -276,7 +280,7 @@ public class GameState : MonoBehaviour
         else if (knifeBuffCount == 4)
         {
             // upgrade knife atk size
-            Vector3 knifeSize = new Vector3(0.7f,0.7f,0.7f);
+            Vector3 knifeSize = new Vector3(0.7f, 0.7f, 0.7f);
             knifeRange.transform.localScale = knifeSize;
             knifeBuffCount++;
         }
@@ -292,20 +296,20 @@ public class GameState : MonoBehaviour
             // upgrade bone throw speed
             playerControl.boneUpgrade = 2;
             boneBuffCount++;
-            playerControl.Invoke("BoneGet",0);
+            playerControl.Invoke("BoneGet", 0);
         }
         else if (boneBuffCount == 2)
         {
             // add more bone
             playerControl.doubleBone = true;
             boneBuffCount++;
-            playerControl.Invoke("BoneGet",0);
+            playerControl.Invoke("BoneGet", 0);
         }
         else if (boneBuffCount == 3)
         {
             // upgrade bone radius
             GameObject bone = GameObject.Find("Bone Radius");
-            Vector3 boneRadius = new Vector3(2,2,2);
+            Vector3 boneRadius = new Vector3(2, 2, 2);
             bone.transform.localScale = boneRadius;
             boneBuffCount++;
         }
@@ -317,7 +321,7 @@ public class GameState : MonoBehaviour
             // upgrade feather stk speed
             playerControl.featherUpgrade = 1;
             featherBuffCount++;
-            playerControl.Invoke("RestartInvokeUseAttack",0f);
+            playerControl.Invoke("RestartInvokeUseAttack", 0f);
         }
         else if (featherBuffCount == 1)
         {
@@ -333,7 +337,7 @@ public class GameState : MonoBehaviour
         else if (featherBuffCount == 3)
         {
             // upgrade feather atk size
-            Vector3 featherSize = new Vector3(2,2,2);
+            Vector3 featherSize = new Vector3(2, 2, 2);
             featherRange.transform.localScale = featherSize;
             featherBuffCount++;
         }
