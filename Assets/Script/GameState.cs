@@ -215,6 +215,7 @@ public class GameState : MonoBehaviour
         spdOn = false;
         knifeOn = false;
         boneOn = false;
+        featherOn = false;
         hpUP.SetActive(false);
         atkUP.SetActive(false);
         defUP.SetActive(false);
