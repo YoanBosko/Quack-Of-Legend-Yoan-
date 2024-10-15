@@ -19,6 +19,8 @@ public class GameState : MonoBehaviour
     public GameObject[] featherObject;
     public GameObject[] pocketObject;
     public GameObject[] skateboardObject;
+    public GameObject[] weaponIcon;
+    public GameObject[] itemIcon;
     public GameObject secondFeatherActivation;
     public UnityEvent pauseEvent;
     public UnityEvent resumeEvent;
@@ -314,6 +316,7 @@ public class GameState : MonoBehaviour
         if (knifeBuffCount == 0)
         {
             knifeBuffCount++;
+            weaponIcon[0].SetActive(true);
         }
         else if (knifeBuffCount == 1)
         {
@@ -348,6 +351,7 @@ public class GameState : MonoBehaviour
         if (boneBuffCount == 0)
         {
             boneBuffCount++;
+            weaponIcon[1].SetActive(true);
         }
         if (boneBuffCount == 1)
         {
@@ -408,6 +412,7 @@ public class GameState : MonoBehaviour
             // aktifin pocket get di PlayerControl lewat button
             playerControl.pocketRegenValue = 2;
             pocketBuffCount++;
+            itemIcon[0].SetActive(true);
         }
         else if (pocketBuffCount == 1)
         {
@@ -431,6 +436,7 @@ public class GameState : MonoBehaviour
             playerStatus.countDownOn = true;
             playerStatus.skateboardMultiplier = 0.2f;
             skateboardBuffCount++;
+            itemIcon[1].SetActive(true);
         }
         else if (skateboardBuffCount == 1)
         {
